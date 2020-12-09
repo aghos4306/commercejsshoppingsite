@@ -10,6 +10,8 @@
 
 ## Navigation bar.Create a Navbar component. Import AppBar, Toolbar, IconButton, Badge, MenuItem, Menu, Typography from material-ui/core. Create Navbar layout.
 
-## Navbar image. create assets folder inside src. paste image inside assets folder. import this image into Navbar.jsx and just use the logo. Build the navbar, import it into App.js file and render it.
+## Navbar image. create assets folder inside src. paste image inside assets folder. import this image as logo into Navbar.jsx and just use the logo. Build the navbar, import it into App.js file and render it.
 
 # Create styles.js file for Products. Style Products cos navbar overlaps with products.
+
+## Fetch Products from commerce js store. Create in components lib -> commerce.js. import Commerce from @chec/commerce.js. Create a new instance of Commerce. Create an account on commercejs.com to get public and private key. create .env file on the root where you will store public key from commerce. Pass this public key into Commerce by using process.env.NAME, pass in a second argument of true. We just created a commerce store.
