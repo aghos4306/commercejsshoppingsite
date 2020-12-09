@@ -4,7 +4,7 @@ import { Grid } from '@material-ui/core';
 import Product from './Product/Product';
 
 const products = [
-    { id: 1, name: 'Shoes', description: 'sports shoe', price: '£14', image: 'https://www.google.com/search?q=sports+shoes&sxsrf=ALeKk00L_kE9sA8Jbq_-qG-wXv2ORUeOBQ:1607530229282&source=lnms&tbm=isch&sa=X&ved=2ahUKEwilqqDipMHtAhXWTBUIHUrHBXMQ_AUoAXoECAQQAw&biw=1422&bih=615#imgrc=ZTsWb--wG7-GWM' },
+    { id: 1, name: 'Shoes', description: 'sports shoe', price: '£14', image: '' },
     { id: 2, name: 'Windows PC', description: 'Lenovo windows 10 pc', price: '£8', image: 'https://unsplash.com/photos/1HzaqbBpxBs' },
     { id: 3, name: 'Chinox Pant', description: 'Mens slim fit pant', price: '£8', image: 'https://unsplash.com/photos/1HzaqbBpxBs' }
 ]
