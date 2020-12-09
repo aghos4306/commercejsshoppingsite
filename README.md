@@ -10,4 +10,4 @@
 
 ## Navigation bar.Create a Navbar component. Import AppBar, Toolbar, IconButton, Badge, MenuItem, Menu, Typography from material-ui/core. Create Navbar layout.
 
-## Navbar image. create assets folder inside src. paste image inside assets folder. import this image into Navbar.jsx and just use the logo
+## Navbar image. create assets folder inside src. paste image inside assets folder. import this image into Navbar.jsx and just use the logo. Build the navbar, import it into App.js file and render it.
