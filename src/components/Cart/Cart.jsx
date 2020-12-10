@@ -5,11 +5,12 @@ import useStyles from './styles';
 
 const Cart = ({ cart }) => {
     //const isEmpty = cart.line_items.length === 0;
-    const classes = useStyles();
+    
     const isEmpty = !cart.line_items.length;
+    const classes = useStyles();
 
     const EmptyCart = () => (
-        <Typography variant="subtitle1">No Item in Shopping Cart, Start shopping...</Typography>
+        <Typography variant="subtitle1">No Item in Shopping Cart, Start shopping!</Typography>
     );
 
     const FilledCart = () => (
