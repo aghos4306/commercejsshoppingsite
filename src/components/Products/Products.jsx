@@ -3,10 +3,10 @@ import { Grid } from '@material-ui/core';
 import Product from './Product/Product';
 
 import useStyles from './styles';
-import shoe from '../../assets/shoe.jpg';
+//import shoe from '../../assets/shoe.jpg';
 
 const products = [
-    { id: 1, name: 'Shoes', description: 'sports shoe', price: '£14', image: {shoe} },
+    { id: 1, name: 'Shoes', description: 'sports shoe', price: '£14', image: 'https://unsplash.com/photos/1HzaqbBpxBs' },
     { id: 2, name: 'Windows PC', description: 'Lenovo windows 10 pc', price: '£8', image: 'https://unsplash.com/photos/1HzaqbBpxBs' },
     { id: 3, name: 'Chinox Pant', description: 'Mens slim fit pant', price: '£8', image: 'https://unsplash.com/photos/1HzaqbBpxBs' }
 ]
