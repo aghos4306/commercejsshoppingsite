@@ -20,4 +20,4 @@
 
 ## Instead of having mockup products, to display these products from commerce, we have to pass them as props to our Products component rendered inside App.js file. Now go to Products.jsx components, destructure products here also. We can comment out now the test products array. We now have the access to the real products. For each product, we send specific product object inside Product component. Most of the work now is going to be done inside the Product.jsx component.
 
-# Product component. Check what property product object have.To test console.log(product) and return <div>Product Sample</div> just so that we dont return the actual return which might give error at this state of development.
+# Product component. Check what property product object have.To test console.log(product) and return <div>Product Sample</div> just so that we dont return the actual return which might give error at this state of development. We can see each product object on the console. Now which properties do we need from each one of these object? product.image will be product.media.source, product.name stays same, product.price will be product.price.formatted_with_symbol
