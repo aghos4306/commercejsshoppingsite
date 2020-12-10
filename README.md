@@ -35,3 +35,5 @@
 ## Implement React Routes. In App.js import BrowserRouter, Switch, Route.
 
 ## Add Redirect upon clicking cart button. Go to Navbar component cos that is where this button is located. Import Link from react-router-dom
+
+## Remove Cart Icon if we are already on the Cart. Still in Navbar.jsx, import useLocation hook. useLocation hook has the property pathname. If location.pathname is equal to home, show Cart Badge.
