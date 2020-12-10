@@ -11,7 +11,7 @@ const products = [
     { id: 3, name: 'Chinox Pant', description: 'Mens slim fit pant', price: '£8', image: 'https://unsplash.com/photos/1HzaqbBpxBs' }
 ]
 
-const Products = () => {
+const Products = ({ products }) => {
     const classes = useStyles()
     return (
         <main className={classes.content}>
