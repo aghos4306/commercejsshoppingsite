@@ -37,3 +37,9 @@
 ## Add Redirect upon clicking cart button. Go to Navbar component cos that is where this button is located. Import Link from react-router-dom
 
 ## Remove Cart Icon if we are already on the Cart. Still in Navbar.jsx, import useLocation hook. useLocation hook has the property pathname. If location.pathname is equal to home, show Cart Badge.
+
+## If there are no Item in the Cart, Add Link that directs users to all products. Inside Cart.jsx, import Link and implement.
+
+## Build Logic for Cart Button, decrementing, incrementing, removing product from cart, empty entire cart, heading to checkout.
+
+# Update Quantity of Specific Product. Go to App.js file, we have cart in useState. We call some of the features from commerce js on the cart. handleUpdateCartQty function performs this task. This function takes productId and quantity as parameters. As the response, Call the update method on commerce js. The update takes in productId, and quantity as a object.

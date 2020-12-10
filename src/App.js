@@ -29,8 +29,16 @@ const App = () => {
 
     //Add products to cart
     const handleAddToCart = async (productId, quantity) => {
-        const item = await commerce.cart.add(productId, quantity);
-        setCart(item.cart);
+        //const response = await commerce.cart.add(productId, quantity);
+        const { cart } = await commerce.cart.add(productId, quantity);
+        setCart(cart);
+    }
+
+    //update product qty
+    const handleUpdateCartQty = async (productId, quantity) => {
+        //const response = await commerce.cart.update(productId, { quantity });
+        const { cart } = await commerce.cart.add(productId, quantity);
+        setCart(cart);
     }
 
     useEffect(() => {
