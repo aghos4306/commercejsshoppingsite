@@ -33,3 +33,5 @@
 # CartItem Component. Create Cart -> CartItem -> CartItem.jsx component. I created the CartItem inside the Cart cos the CartItem is only going to be used inside the Cart. Create a functional component and import needed material ui core component. Now that we created CartItem component, import and render CartItem in Cart.jsx, pass item as props into the rendered CartItem inside Cart.jsx. We can now go to CartItem.jsx component and destructure item, cos we know that we are receiving now item through props.
 
 ## Implement React Routes. In App.js import BrowserRouter, Switch, Route.
+
+## Add Redirect upon clicking cart button. Go to Navbar component cos that is where this button is located. Import Link from react-router-dom
