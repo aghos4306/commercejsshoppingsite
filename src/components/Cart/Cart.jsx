@@ -39,7 +39,7 @@ const Cart = ({ cart }) => {
     return (
         <Container>
             <div className={classes.toolbar} />
-            <Typography className={classes.title} variant="h3">
+            <Typography className={classes.title} variant="h3" gutterBottom>
                 Your Shopping List
             </Typography>
             { !cart.line_items.length ? <EmptyCart /> : <FilledCart />  }
