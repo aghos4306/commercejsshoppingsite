@@ -3,10 +3,11 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 /* import Products from './components/Products/Products';
 import Navbar from './components/Navbar/Navbar';
 import Cart from './components/Cart/Cart';
+import Checkout from './components/Checkout/Checkout';
 */
-
+import Checkout from './components/CheckoutForm/Checkout/Checkout';
 import { commerce } from './components/lib/commerce';
-import { Products, Navbar, Cart } from './components';
+import { Products, Navbar, Cart} from './components';
 
 
 const App = () => {
@@ -72,6 +73,9 @@ const App = () => {
                             cart={cart} 
                             handleUpdateCartQty={handleUpdateCartQty} handleRemoveFromCart={handleRemoveFromCart} handleEmptyCart={handleEmptyCart}
                         />
+                    </Route>
+                    <Route exact path="/checkout">
+                        <Checkout />
                     </Route>
                 </Switch>
             </div>
