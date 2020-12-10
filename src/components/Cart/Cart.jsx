@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 import useStyles from './styles';
 
-const Cart = ({ cart }) => {
+const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart }) => {
     //const isEmpty = cart.line_items.length === 0;
     
     const classes = useStyles();
