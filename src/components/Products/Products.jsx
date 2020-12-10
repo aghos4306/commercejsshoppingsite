@@ -11,7 +11,7 @@ import useStyles from './styles';
     { id: 3, name: 'Chinox Pant', description: 'Mens slim fit pant', price: '£8', image: 'https://unsplash.com/photos/1HzaqbBpxBs' }
 ] */
 
-const Products = ({ products }) => {
+const Products = ({ products, onAddToCart }) => {
     const classes = useStyles()
     return (
         <main className={classes.content}>
@@ -19,7 +19,7 @@ const Products = ({ products }) => {
         <Grid container justify="center" spacing={4}>
             {products.map((product) => (
                 <Grid key={product.id} item xs={12} sm={6} md={4} lg={3}>
-                    <Product product={product} />
+                    <Product product={product} onAddToCart={onAddToCart}/>
                 </Grid>
             ))}
         </Grid>
