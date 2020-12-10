@@ -11,7 +11,6 @@ import { Products, Navbar, Cart } from './components';
 
 const App = () => {
     const [products, setProducts] = useState([]);
-
     const [cart, setCart] = useState({});
 
     //handle fetch products
@@ -37,7 +36,7 @@ const App = () => {
     //update product qty
     const handleUpdateCartQty = async (productId, quantity) => {
         //const response = await commerce.cart.update(productId, { quantity });
-        const { cart } = await commerce.cart.add(productId, quantity);
+        const { cart } = await commerce.cart.add(productId, { quantity });
         setCart(cart);
     }
 
