@@ -41,6 +41,18 @@ const App = () => {
         setCart(cart);
     }
 
+    //handle remove from cart
+    const handleRemoveFromCart = async (productId) => {
+        const { cart } = await commerce.cart.remove(productId);
+        setCart(cart);
+    }
+
+    //empty entire cart
+    const handleEmptyCart = async () => {
+        const { cart } = await commerce.cart.empty();
+        setCart(cart);
+    }
+
     useEffect(() => {
         fetchProducts();
         fetchCart();
