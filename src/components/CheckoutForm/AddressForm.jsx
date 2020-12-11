@@ -12,6 +12,36 @@ const AddressForm = () => {
                 <form onSubmit=''> 
                     <Grid container spacing={3}>
                         <FormInput required name='firstname' label='First Name' />
+                        <FormInput required name='lastname' label='Last Name' />
+                        <FormInput required name='address1' label='Address' />
+                        <FormInput required name='email' label='Email' />
+                        <FormInput required name='city' label='City' />
+                        <FormInput required name='ZIP' label='Zip Code' />
+                    </Grid>
+                
+                    <Grid item xs={12} sm={6}>
+                        <InputLabel>Shipping Country</InputLabel>
+                        <Select value={} fullwidth onChange={}>
+                            <MenuItem key={} value={}> 
+                                Select Me
+                            </MenuItem>
+                        </Select>
+                    </Grid>
+                    <Grid item xs={12} sm={6}>
+                        <InputLabel>Shipping Subdivision</InputLabel>
+                        <Select value={} fullwidth onChange={}>
+                            <MenuItem key={} value={}> 
+                                Select Me
+                            </MenuItem>
+                        </Select>
+                    </Grid>
+                    <Grid item xs={12} sm={6}>
+                        <InputLabel>Shipping Options</InputLabel>
+                        <Select value={} fullwidth onChange={}>
+                            <MenuItem key={} value={}> 
+                                Select Me
+                            </MenuItem>
+                        </Select>
                     </Grid>
                 </form>
             </FormProvider>
