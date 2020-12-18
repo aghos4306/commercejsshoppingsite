@@ -68,8 +68,10 @@
 
 # We created in general 6 custom component input fields and three different selects.
 
-# Add Btn to AddressForm.jsx.
+# Add Btn, Back to Cart and Submit to AddressForm.jsx.
+
+# Submit the Form. Still in AddressForm.jsx, on the onSubmit within the form. methods.handleSubmit((data) => ()) the data holds data of all specific field's value. We call one function that will bring this data back to Checkout.jsx. To receive those data in Checkout.jsx, inside Checkout.jsx, create the function next(). Pass this function as a prop to AddressForm component rendered in Checkout.jsx. The next function accepts data parameter. We set this data to shipping data (all shipping data gotten from AddressForm). We create a new useState field shippingData, setShippingData which will be initially an empty object. Inside the next function, setShippingData(data). Once we setShippingData, we move setActiveStep by 1 step further.
+
+# Just above next function create nextStep function and backStep function, this sets setActiveStep to step + 1 and -1 respectively. Go to AddressForm.jsx, destructure next that was passed as props in rendered AddressForm within Checkout.jsx. We call this next function right on the onSubmit within form. Pass in using spread operator all the properties within the form i.e ...data, and pass in also shippingCountry, shippingSubdivision, shippingOption. Back to Checkout.jsx file, pass shippingData as props on rendered PaymentForm. Based on this shippingData, PaymentForm will be able to finalise the order.
 
 ref number for application form 104344852
-
-# still in AddressForm.jsx create six useState for shippingCountries up to shippingOptions. Use commerce api to fetch all available countries, shipping subdivision and shipping options for customers. Recall shipping countries, shipping subdivision and shipping options are the properties we set up in commerce js dashboard, that we can ship domestically in US and ship internationally to selected countries in Europe. import commerce.js file. Implement functionality to fetch those properties using commerce api.
