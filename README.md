@@ -64,6 +64,10 @@
 
 # Populate subdivisions upon selecting a country. Still in AddressForm.jsx, create another function fetchSubdivision. This function accepts the parameter countryCode. We cannot call fetchSubdivisions function immediately after fetchShippingCountries, because at that time, we won't yet have the country. What we have to do is create another useEffect. This useEffect is going to have one dependency, that is going to be shippingCountry. So whenever shippingCountry changes, we call useEffect which houses fetchSubdivisions function. Convert subdivisions to array, loop over them and display based on selection. Only after we get the shipping country can we get the sub division for that specific country.
 
+# Populate shipping options: for united states it is going to be free, for others it is going to be international paid. Same drill as populate subdivisions. We get the fetchShippingOptions after we have gotten fetchShippingCountries and fetchSubdivision. So we set another useEffect that runs only once the shippingSubdivision changes.
+
+# We created in general 6 custom component input fields and three different selects.
+
 ref number for application form 104344852
 
 # still in AddressForm.jsx create six useState for shippingCountries up to shippingOptions. Use commerce api to fetch all available countries, shipping subdivision and shipping options for customers. Recall shipping countries, shipping subdivision and shipping options are the properties we set up in commerce js dashboard, that we can ship domestically in US and ship internationally to selected countries in Europe. import commerce.js file. Implement functionality to fetch those properties using commerce api.
