@@ -30,6 +30,7 @@ const App = () => {
     //Add products to cart
     const handleAddToCart = async (productId, quantity) => {
         //const response = await commerce.cart.add(productId, quantity);
+        //setCart(response.cart);
         const { cart } = await commerce.cart.add(productId, quantity);
         setCart(cart);
     }
@@ -37,6 +38,7 @@ const App = () => {
     //update product qty
     const handleUpdateCartQty = async (productId, quantity) => {
         //const response = await commerce.cart.update(productId, { quantity });
+        //setCart(response.cart);
         const { cart } = await commerce.cart.add(productId, { quantity });
         setCart(cart);
     }
@@ -75,7 +77,7 @@ const App = () => {
                         />
                     </Route>
                     <Route exact path="/checkout">
-                        <Checkout />
+                        <Checkout cart={cart} />
                     </Route>
                 </Switch>
             </div>

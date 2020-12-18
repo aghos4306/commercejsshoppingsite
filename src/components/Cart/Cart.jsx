@@ -24,7 +24,7 @@ const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart
                         <CartItem 
                             item={item} 
                             onUpdateCartQty={handleUpdateCartQty} 
-                            onRemoveFromCart={handleRemoveFromCart} 
+                            onRemoveFromCart={handleRemoveFromCart}     
                         /> 
                     </Grid>
                 ))}
