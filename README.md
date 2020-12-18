@@ -68,6 +68,8 @@
 
 # We created in general 6 custom component input fields and three different selects.
 
+# Add Btn to AddressForm.jsx.
+
 ref number for application form 104344852
 
 # still in AddressForm.jsx create six useState for shippingCountries up to shippingOptions. Use commerce api to fetch all available countries, shipping subdivision and shipping options for customers. Recall shipping countries, shipping subdivision and shipping options are the properties we set up in commerce js dashboard, that we can ship domestically in US and ship internationally to selected countries in Europe. import commerce.js file. Implement functionality to fetch those properties using commerce api.

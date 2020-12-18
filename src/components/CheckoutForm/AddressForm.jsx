@@ -3,6 +3,7 @@ import { InputLabel, Select, MenuItem, Button, Grid, Typography } from '@materia
 import { useForm, FormProvider } from 'react-hook-form';
 import FormInput from '../CheckoutForm/Checkout/CustomTextField';
 import { commerce } from '../lib/commerce';
+import { Link } from 'react-router-dom';
 
 
 const AddressForm = ({ checkoutToken }) => {
@@ -98,6 +99,11 @@ const AddressForm = ({ checkoutToken }) => {
                         </Select>
                     </Grid>   
                     </Grid>
+                    <br />
+                    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                        <Button component={Link} to="/cart" variant="outlined">Back to Cart</Button>
+                        <Button type="submit" color="primary" variant="contained">Next</Button>
+                    </div>
                 </form>
             </FormProvider>
         </>
