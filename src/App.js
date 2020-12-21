@@ -8,7 +8,7 @@ import Checkout from './components/Checkout/Checkout';
 import Checkout from './components/CheckoutForm/Checkout/Checkout';
 import { commerce } from './components/lib/commerce';
 import { Products, Navbar, Cart} from './components';
-import { AirlineSeatLegroomReducedRounded } from '@material-ui/icons';
+//import { AirlineSeatLegroomReducedRounded } from '@material-ui/icons';
 
 
 const App = () => {
@@ -96,7 +96,12 @@ const App = () => {
                         />
                     </Route>
                     <Route exact path="/checkout">
-                        <Checkout cart={cart} />
+                        <Checkout 
+                            cart={cart}
+                            order={order}
+                            error={errorMessage}
+                            onCaptureCheckout={handleCaptureCheckout}
+                        />
                     </Route>
                 </Switch>
             </div>
