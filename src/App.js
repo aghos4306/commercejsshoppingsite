@@ -8,11 +8,14 @@ import Checkout from './components/Checkout/Checkout';
 import Checkout from './components/CheckoutForm/Checkout/Checkout';
 import { commerce } from './components/lib/commerce';
 import { Products, Navbar, Cart} from './components';
+import { AirlineSeatLegroomReducedRounded } from '@material-ui/icons';
 
 
 const App = () => {
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState({});
+    const [order, setOrder] = useState({});
+    const [errorMessage, setErrorMessage] = useState('');
 
     //handle fetch products
     const fetchProducts = async () => {
@@ -53,6 +56,22 @@ const App = () => {
     const handleEmptyCart = async () => {
         const { cart } = await commerce.cart.empty();
         setCart(cart);
+    }
+
+    const handleCaptureCheckout = async (checkoutTokenId, newOrder) => {
+       try {
+        const incomingOrder = await commerce.checkout.capture(checkoutTokenId, newOrder);
+        setOrder(incomingOrder);
+        refreshCart();
+       } catch (error) {
+           setErrorMessage(error.data.error.message);
+       }
+    }
+
+    //clear cart field after order completion
+    const refreshCart = async () => {
+        const newCart = await commerce.cart.refresh();
+        setCart(newCart);
     }
 
     useEffect(() => {
